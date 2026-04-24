@@ -11,6 +11,17 @@ The architecture is:
 
 User → CloudFront (CDN + HTTPS) → S3 (Static Website)
 
+
+## 🏗️ Architecture Diagram
+
+User → CloudFront (HTTPS, CDN, Cache) → S3 Bucket (Static Files)
+
+## 💡 Why This Architecture?
+- S3 alone gives HTTP only — CloudFront adds HTTPS
+- CloudFront caches content globally → faster load time
+- S3 direct public access disabled → CloudFront is the only entry point (more secure)
+
+
 ---
 
 ## 📸 Screenshots
